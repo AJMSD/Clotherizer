@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="./script.js"></script>
+
+        <title> clothimizer</title>
+        <style>
+            .background {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              width:100%;
+              height: 100vh;
+              background-position-x: center;
+              background-size: cover;
+              background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("BG.jpg");
+
+          }
+
+      
+
+      
+  
+
+        span 
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 4px;
+            height: 4px;
+            background: #fff;
+            
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(255,255,255,0.1),
+            0 0 0 8px rgba(255,255,255,0.1),
+            0 0 20px  (255,255,255,1);
+            animation: animate 3s linear infinite; 
+        }
+
+        span::before {
+              
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 300px;
+            height: 1px;
+            background: linear-gradient(90deg, #000, transparent)
+            
+        }
+        @keyframes animate {
+          0%
+          {
+            transform: rotate(315deg) translateX(0);
+          }
+          70%{
+            opacity: 1; 
+          }
+          100%
+          {
+            transform: rotate(315deg) translateX(-1000px);
+          }
+        
+        }
+
+        span:nth-child(1)
+        {
+          top:0;
+          right: 80px;
+          left: initial;
+          animation-delay: 0.2s;
+          animation-duration: 3s;
+
+        }
+        span:nth-child(2)
+        {
+          top:0;
+          right: 80px;
+          left: initial;
+          animation-delay: 0.2s;
+          animation-duration: 3s;
+
+        }
+        span:nth-child(3)
+        {
+          top:80px;
+          right: 0px;
+          left: initial;
+          animation-delay: 0.4s;
+          animation-duration: 2s;
+
+        } 
+        span:nth-child(4)
+        {
+          top:0px;
+          right: 180px;
+          left: initial;
+          animation-delay: 0.6s;
+          animation-duration: 1.5s;
+
+        } 
+        span:nth-child(5)
+        {
+          top:80px;
+          right: 400px;
+          left: initial;
+          animation-delay: 0.8s;
+          animation-duration: 2.5s;
+
+        } 
+        span:nth-child(6)
+        {
+          top:0px;
+          right: 600px;
+          left: initial;
+          animation-delay: 1s;
+          animation-duration: 3s;
+
+        } 
+        span:nth-child(7)
+        {
+          top:300px;
+          right: 0px;
+          left: initial;
+          animation-delay: 1.2s;
+          animation-duration: 1.75s;
+
+        } 
+        span:nth-child(8)
+        {
+          top:0px;
+          right: 700px;
+          left: initial;
+          animation-delay: 1.4s;
+          animation-duration: 1.25s;
+
+        } 
+        span:nth-child(9)
+        {
+          top:0px;
+          right: 1000px;
+          left: initial;
+          animation-delay: 1.2s;
+          animation-duration: 2.25s;
+
+        } 
+        span:nth-child(10)
+        {
+          top:0px;
+          right: 450px;
+          left: initial;
+          animation-delay: 2.75s;
+          animation-duration: 2.25s;
+
+        } 
+          * {
+            font-family: TISA;
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+          }
+          
+          body {
+            text-align:center;
+          }
+          .paragraph {
+            font-size: 18px;
+            margin-top: -30px;
+            color: white;
+          }
+          #submit {
+            text-align:center;
+            margin-top: 10px;
+
+          }
+          .customise {
+            border-radius:10px;
+            background-color: rgb(0,220,0);
+            
+          }
+
+          #user-info{ 
+            position: relative;
+            top:-700px;
+            right:-800px;
+          }
+     
+          .form {
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            margin-bottom: 175px;
+        
+          }
+
+          #pants-form{
+            color: white;
+          }
+
+          #desc-pants {
+            color: white;
+          }
+
+        
+
+       
+        
+
+          #color-plate {
+            position: relative;
+            bottom: -50px;
+            margin-top:-100px;
+            margin-left: -200px;
+            
+          }
+          
+          div{
+            display: block;
+            width:100%;
+          }
+
+          #pic_pant {
+            width: 500px;
+            height: 350px;
+          }
+
+          
+          #pic {
+            width: 400px;
+            height: 400px;
+  
+          }
+
+          #jeans {
+            margin: -100px;
+            position: relative;
+            right: -92px;
+          }          
+
+          
+          #gallery {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0 4px;
+            position: relative;
+            right: 270px;
+            bottom: 150px;
+            
+          }
+
+          #pants {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0 4px;
+            position: relative;
+            left: 370px;
+            bottom: 150px;
+            width: 200px;
+          }
+          
+          #shirt_color_header {
+            width:100%;
+            margin: 0 auto;
+            padding: 0px;
+          }
+         
+          #gallery button {
+            width: 25px;
+            height: 25px;;
+            object-fit: cover;
+            margin-top: 8px;
+            padding: 0 4px;
+            border-radius: 20%;
+            margin: 2px;
+          
+          }
+          #pants button {
+            width: 25px;
+            height: 25px;;
+            object-fit: cover;
+            margin-top: 8px;
+            padding: 0 4px;
+            border-radius: 20%;
+            margin: 2px;
+          }
+          
+
+          #pants_color_header {
+            width:100%;
+            margin: 0 auto;
+            padding: 0px;
+            color: white;
+          }         
+
+          #pants-selector {
+            position: absolute ;
+            top:450px;
+            left:725px;
+
+          }
+
+
+
+          .btn1 {
+            background-color: #EC2E06;
+          }
+
+          .btn2 {
+            background-color: #EC9506;
+          }
+
+          .btn3 {
+            background-color: #E9EC06;
+          }    
+
+          .btn4 {
+            background-color: #25EC06;
+          }    
+
+          .btn5 {
+            background-color: #0654FC;
+          }  
+
+          .btn6 {
+            background-color: #6B06FC;
+          }    
+
+          .transparent {
+            color: rgba(255, 255, 255);    
+            font-size: 18px;
+            position: relative;
+            top: -130px;
+            transform: rotate(90deg);
+            left: 55px;
+            font-size: 20px;
+          }
+          
+          #val-pants {
+            color: black;
+
+          }
+          .icon-holder {
+            width: 150px;
+            height: 100px;
+            margin: 0 auto;
+            position: absolute;
+            top:125px;
+            left:637px;
+            opacity: 1;
+          }
+          .icon {
+            width: 100%;
+            height: 100%;
+            margin: 10px auto;
+
+          }
+
+          .icon-selector {
+            background-color: #A3CFA7;
+            width: 315px;
+            height: 250px;
+            margin: 0 auto;
+            position: absolute;
+            top:150px;
+            right:400px;
+            opacity: 1;    
+            border-radius: 10px;    
+          }
+
+          .icon-space-selector {
+            width: 30%;
+            height: 35%;
+            background-color:#A3CFA7;
+            border: 0;
+
+
+          }
+
+          #icon-holder-pants {
+            position: absolute;
+            width: 60px;
+            height: 214px;
+            top:90px;
+            right: 800px;
+            transform: rotate(3deg);
+            
+          }
+
+          #input-field-1 {
+            position: absolute;
+            top: 0;
+            right:0;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+          }
+          #text-here {
+            width: 99%;
+
+          }
+          #button-clicked {
+            width: 99%;
+            height: 20%;
+          }
+
+          #change-text {
+            width: 99%;
+            height: 20%;
+          }
+          #pants-submitter {
+            position: absolute;
+            top:475px;
+            right:50px;
+            width:250px;
+            height:200px;
+            background-color: #A3CFA7;
+            border-radius: 10px;
+          }
+          #textarea-pants {
+            font-family:'Alternate Gothic';
+            font-size:26px;
+          }
+          #shirt-submitter {
+            position: absolute;
+            top:175px;
+            right:50px;
+            width:250px;
+            height:200px;
+            background-color: #A3CFA7;
+            border-radius: 10px;
+          }
+
+          #textarea-shirts {
+            position:absolute;
+            top:270px;
+            left: 623px;
+            width:175px;
+            height:35px;
+            transform: rotate(0deg);
+            font-family:'Alternate Gothic';
+            font-size:26px;
+          }
+          /*#logo {
+            position: absolute;
+            top:0;
+            left:0;
+            width:200px;
+            height:200px;
+            background-color: white;
+          }*/
+          #submitted {
+            width:150px;
+            height: 40px;
+            border-radius: 10px;
+            position: relative;
+            right: -750px;
+            top: -50px;
+            background-color: rgb(0,255,0);
+            color: white;
+
+          }
+          .navbar{
+            width: 85%;
+            margin: auto;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .logo{
+            width: 250px;
+            position: relative;
+            right: 250px;
+            cursor: pointer;
+            text-align: center;
+          }
+          .navbar ul li{
+            list-style: none;
+            display: inline-block;
+            font-size: 13px;
+            margin: 0 20px;
+          
+            position: relative;
+            right: -200px;
+
+          }
+          .navbar ul li a{
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+          }
+          .navbar ul li::after{
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #009688;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+          }
+          .navbar ul li:hover::after{
+            width: 100%;
+          }
+
+
+        </style>
+  
+    </head>
+
+
+
+    <body> 
+     
+      
+      
+
+      <div class='background'>
+        <span></span>        
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <div class="navbar">
+          <a href="Homepage.html"><img src="navbarlogo.png" class="logo"></a>
+          <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="test.html">Customize</a></li>
+            <li><a href="Donate.html">Donate</a></li>
+            <li><a href="Charity.html">Charity</a></li>
+          </ul>
+        </div>
+
+
+
+
+        <!--<img id='logo' src='Clothimizer.jpeg'>-->
+        <p class='paragraph'>Customise your very <strong>own</strong> outfit for charity!</p>
+        <div id='color-plate' type='container-fluid'>
+          <div id='hoodie'>
+
+            <img id= 'pic' src='ourshirt_red.png'>
+            <p class='transparent' id='textarea-shirts'><strong>Text</strong></p>
+
+            <div id = 'icon-holder' name='icon-holder' type='container-fluid' class='icon-holder'>
+
+            </div>
+
+        
+            
+
+            <div id ='gallery' type='container-fluid'> 
+              <h2 id='shirt_color_header'>Shirt</h2>
+              <button class ='btn1' class= 'button' onclick='change1()'></button>
+              <button class= 'btn2' class= 'button' onclick='change2()'></button>
+              <button class = 'btn3' class= 'button' onclick='change3()'></button>
+              <button class = 'btn4' class= 'button' onclick='change4()'></button>
+              <button class = 'btn5' class= 'button' onclick='change5()'></button>
+              <button class = 'btn6' class= 'button' onclick='change6()'></button> 
+      
+            </div>
+
+          </div>
+        
+        
+          <div id='jeans'>
+
+            <img id='pic_pant' src='ourpants_red.png'>
+            <p class='transparent' id='textarea-pants'><strong>Text</strong></p>
+
+            <div id='icon-holder-pants' type='container-fluid' class='icon-holder'>
+
+            </div>
+
+            <div id ='pants' type='container-fluid'>
+              <h2 id='pants_color_header'>Pants</h2>
+              <button class ='btn1' class= 'button' onclick='pant1()'></button>
+              <button class= 'btn2' class= 'button' onclick='pant2()'></button>
+              <button class= 'btn3' class= 'button' onclick='pant3()'></button>
+              <button class= 'btn4' class= 'button' onclick='pant4()'></button>
+              <button class= 'btn5' class= 'button' onclick='pant5()'></button>
+              <button class= 'btn6' class= 'button' onclick='pant6()'></button>          
+            </div>
+
+          </div>
+
+          <button id='submitted'><a href='donate.html'>Finalise Design!</a></button>
+
+          
+
+        </div>
+        </div>
+        
+        <div class = 'icon-selector' type='container-fluid'>
+          <h3><strong>Shirt Icons</strong></h3>
+          <button class='icon-space-selector' onclick='shirtIcon1()'><img class='icon' src='Ouricon_1.png'></button>
+          <button class='icon-space-selector' onclick='shirtIcon2()'><img class='icon' src='Ouricon_2.png'></button>
+          <button class='icon-space-selector' onclick='shirtIcon3()'><img class='icon' src='Ouricon_3.png'></button>
+          <button class='icon-space-selector' onclick='shirtIcon4()'><img class='icon' src='Ouricon_4.png'></button>
+          <button class='icon-space-selector' onclick='shirtIcon5()'><img class='icon' src='Ouricon_5.png'></button>
+          <button class='icon-space-selector' onclick='shirtIcon6()'><img class='icon' src='Ouricon_6.png'></button>
+        </div>
+
+        <div id = 'pants-selector' class = 'icon-selector' type='container-fluid'>
+          <h3><strong>Pant Icons</strong></h3>
+          <button class='icon-space-selector' onclick='pantsIcon1()'><img class='icon' src='Ouricon_1.png'></button>
+          <button class='icon-space-selector' onclick='pantsIcon2()'><img class='icon' src='Ouricon_2.png'></button>
+          <button class='icon-space-selector' onclick='pantsIcon3()'><img class='icon' src='Ouricon_3.png'></button>
+          <button class='icon-space-selector' onclick='pantsIcon4()'><img class='icon' src='Ouricon_4.png'></button>
+          <button class='icon-space-selector' onclick='pantsIcon5()'><img class='icon' src='Ouricon_5.png'></button>
+          <button class='icon-space-selector' onclick='pantsIcon6()'><img class='icon' src='Ouricon_6.png'></button>
+        </div>
+
+     
+          <div id='shirt-submitter'>
+              <legend><strong>Hoodie Description</strong></legend>
+              <hr id='seperator'>
+
+              <label>Customise your hoodie with a  message!
+                <input id='val-shirts' value='' maxlength=12 name="description"  placeholder="I LOVE LGBTQ+" required></input>
+              </label>
+
+              <button value='click here'  id='customise-1' class='customise' onclick='textChanger2()'>Customize!</button>
+
+
+          </div>
+
+          <div id='pants-submitter'>
+              <legend id='desc-pants'><strong>Pants Description</strong></legend>
+              <hr id='seperator'>
+
+              <label>Customise your pants with a message!
+                <input value=''id='val-pants'  name="description"  placeholder="I LOVE LGBTQ+" maxlength=15 required>
+              </label>
+
+              <button value='click here' id='customise-2' class='customise' onclick ='textChanger()' >Customize!</button>
+
+
+            </div>
+          </div>
+
+          
+        
+   
+
+
+      </div>
+
+
+
+
+      <script>
+       
+
+        function change1(){
+          document.getElementById('pic').src='ourshirt_red.png';
+          //we need to change the background color of all button elems when this is called
+          let ourButtons = document.querySelector('#icon-holder').getElementsByTagName('button') 
+
+          for (let i = 0; i < ourButtons.length; i++) {
+            ourButtons[i].style.backgroundColor='red';
+          }
+
+        }
+        function change2() {
+          document.getElementById('pic').src='ourshirt_orange.png';
+          let ourButtons = document.querySelector('#icon-holder').getElementsByTagName('button') 
+
+          for (let i = 0; i < ourButtons.length; i++) {
+            ourButtons[i].style.backgroundColor='#e68000';
+          }
+        }
+        function change3() {
+          document.getElementById('pic').src='ourshirt_yellow.png';
+          let ourButtons = document.querySelector('#icon-holder').getElementsByTagName('button') 
+
+          for (let i = 0; i < ourButtons.length; i++) {
+            ourButtons[i].style.backgroundColor='#d9ee00';
+          }
+        }
+        function change4() {
+          document.getElementById('pic').src='ourshirt_green.png';
+          let ourButtons = document.querySelector('#icon-holder').getElementsByTagName('button') 
+
+          for (let i = 0; i < ourButtons.length; i++) {
+            ourButtons[i].style.backgroundColor='#1e9707';
+          }
+        }
+        function change5() {
+          document.getElementById('pic').src='ourshirt_blue.png';
+          let ourButtons = document.querySelector('#icon-holder').getElementsByTagName('button') 
+
+          for (let i = 0; i < ourButtons.length; i++) {
+            ourButtons[i].style.backgroundColor='#0000ff';
+          }
+        }
+        function change6() {
+          document.getElementById('pic').src='ourshirt_purple.png';
+          let ourButtons = document.querySelector('#icon-holder').getElementsByTagName('button') 
+
+          for (let i = 0; i < ourButtons.length; i++) {
+            ourButtons[i].style.backgroundColor='#ab00e6';
+          }
+        }
+
+        function pant1(){
+          document.getElementById('pic_pant').src='ourpants_red.png';
+          let ourButtons = document.querySelector('#icon-holder-pants').getElementsByTagName('button') 
+
+          for (let i = 0; i < ourButtons.length; i++) {
+            ourButtons[i].style.backgroundColor='#da0000';
+          }
+        }
+        function pant2() {
+          document.getElementById('pic_pant').src='ourpants_orange.png';
+          let ourButtons = document.querySelector('#icon-holder-pants').getElementsByTagName('button') 
+
+          for (let i = 0; i < ourButtons.length; i++) {
+            ourButtons[i].style.backgroundColor='#de7100';
+          }
+        }
+        function pant3() {
+          document.getElementById('pic_pant').src='ourpants_yellow.png';
+          let ourButtons = document.querySelector('#icon-holder-pants').getElementsByTagName('button') 
+
+          for (let i = 0; i < ourButtons.length; i++) {
+            ourButtons[i].style.backgroundColor='#f6ee02';
+          }
+        }
+        function pant4() {
+          document.getElementById('pic_pant').src='ourpants_green.png';
+          let ourButtons = document.querySelector('#icon-holder-pants').getElementsByTagName('button') 
+
+          for (let i = 0; i < ourButtons.length; i++) {
+            ourButtons[i].style.backgroundColor='#1dbb00';
+          }
+        }
+        function pant5() {
+          document.getElementById('pic_pant').src='ourpants_blue.png';
+          let ourButtons = document.querySelector('#icon-holder-pants').getElementsByTagName('button') 
+
+          for (let i = 0; i < ourButtons.length; i++) {
+            ourButtons[i].style.backgroundColor='#002ee7';
+          }
+        }
+        function pant6() {
+          document.getElementById('pic_pant').src='ourpants_purple.png';
+
+          let ourButtons = document.querySelector('#icon-holder-pants').getElementsByTagName('button') 
+
+          for (let i = 0; i < ourButtons.length; i++) {
+            ourButtons[i].style.backgroundColor='#ab00e6';
+          }
+        }
+        let shirtLimit =0;
+        let redRegex = /ourshirt_red.png/;
+        let yellowRegex= /ourshirt_yellow.png/;
+        let orangeRegex = /ourshirt_orange.png/;
+        let greenRegex = /ourshirt_green.png/;
+        let blueRegex = /ourshirt_blue.png/;
+        let purpleRegex = /ourshirt_purple.png/;
+
+        let redPantRegex = /ourpants_red.png/;
+        let yellowPantRegex= /ourpants_yellow.png/;
+        let orangePantRegex = /ourpants_orange.png/;
+        let greenPantRegex = /ourpants_green.png/;
+        let bluePantRegex = /ourpants_blue.png/;
+        let purplePantRegex = /ourpants_purple.png/;
+        
+
+        function shirtIcon1() {
+          //adding shirt
+          let myButton = document.createElement('Button');
+          let myIcon = document.createElement('img');
+          const shirtWindow = document.querySelector('#icon-holder');
+          const getShirt = document.querySelector('#pic');
+          let getShirtSrc = document.querySelector('#pic').src;
+ 
+          if (shirtLimit < 4) {
+            myButton.style.width = '40%';
+            myButton.style.height = '40%';
+            myButton.style.margin = '10px 4%';
+            //setting background
+            redRegex.test(getShirt.src) ? myButton.style.backgroundColor='red':
+            orangeRegex.test(getShirt.src) ? myButton.style.backgroundColor='#e68000':
+            yellowRegex.test(getShirt.src)  ? myButton.style.backgroundColor='#d9ee00':
+            greenRegex.test(getShirt.src) ? myButton.style.backgroundColor='#1e9707':
+            blueRegex.test(getShirt.src) ? myButton.style.backgroundColor='#0000ff':
+            myButton.style.backgroundColor='#ab00e6';        
+
+            myButton.style.border =0;
+           
+            shirtWindow.appendChild(myButton);
+    
+            myIcon.src='Ouricon_1.png';
+            myIcon.style.width= '100%';
+            myIcon.style.height='100%';
+            myIcon.style.margin = 0;
+            /*document.getElementById('icon1').src='Ouricon_1.png';*/
+            myButton.appendChild(myIcon);
+            getShirt.src=getShirtSrc;
+            shirtLimit++;
+            myButton.onclick = function() {
+              myButton.remove();
+              shirtLimit--;
+            }
+            //need to create a button that is parent to icon and spans it
+
+          }
+
+        }
+        /* val-pants , customise-2, textarea-pants */
+        function shirtIcon2() {
+          //adding shirt
+          let myButton = document.createElement('Button');
+          let myIcon = document.createElement('img');
+          const shirtWindow = document.querySelector('#icon-holder');
+          const getShirt = document.querySelector('#pic');
+          let getShirtSrc = document.querySelector('#pic').src;
+ 
+          if (shirtLimit < 4) {
+            myButton.style.width = '40%';
+            myButton.style.height = '40%';
+            myButton.style.margin = '10px 4%';
+            //setting background
+            redRegex.test(getShirt.src) ? myButton.style.backgroundColor='red':
+            orangeRegex.test(getShirt.src) ? myButton.style.backgroundColor='#e68000':
+            yellowRegex.test(getShirt.src)  ? myButton.style.backgroundColor='#d9ee00':
+            greenRegex.test(getShirt.src) ? myButton.style.backgroundColor='#1e9707':
+            blueRegex.test(getShirt.src) ? myButton.style.backgroundColor='#0000ff':
+            myButton.style.backgroundColor='#ab00e6';       
+
+            myButton.style.border =0;
+           
+            shirtWindow.appendChild(myButton);
+    
+            myIcon.src='Ouricon_2.png';
+            myIcon.style.width= '100%';
+            myIcon.style.height='100%';
+            myIcon.style.margin = 0;
+            /*document.getElementById('icon1').src='Ouricon_1.png';*/
+            myButton.appendChild(myIcon);
+            getShirt.src=getShirtSrc;
+            shirtLimit++;
+            myButton.onclick = function() {
+              myButton.remove();
+              shirtLimit--;
+            }
+            //need to create a button that is parent to icon and spans it
+
+          }
+
+        }   
+        function shirtIcon3() {
+          //adding shirt
+          let myButton = document.createElement('Button');
+          let myIcon = document.createElement('img');
+          const shirtWindow = document.querySelector('#icon-holder');
+          const getShirt = document.querySelector('#pic');
+          let getShirtSrc = document.querySelector('#pic').src;
+ 
+          if (shirtLimit < 4) {
+            myButton.style.width = '40%';
+            myButton.style.height = '40%';
+            myButton.style.margin = '10px 4%';
+            //setting background
+            redRegex.test(getShirt.src) ? myButton.style.backgroundColor='red':
+            orangeRegex.test(getShirt.src) ? myButton.style.backgroundColor='#e68000':
+            yellowRegex.test(getShirt.src)  ? myButton.style.backgroundColor='#d9ee00':
+            greenRegex.test(getShirt.src) ? myButton.style.backgroundColor='#1e9707':
+            blueRegex.test(getShirt.src) ? myButton.style.backgroundColor='#0000ff':
+            myButton.style.backgroundColor='#ab00e6';       
+            myButton.style.border =0;
+           
+            shirtWindow.appendChild(myButton);
+    
+            myIcon.src='Ouricon_3.png';
+            myIcon.style.width= '100%';
+            myIcon.style.height='100%';
+            myIcon.style.margin = 0;
+            /*document.getElementById('icon1').src='Ouricon_1.png';*/
+            myButton.appendChild(myIcon);
+            getShirt.src=getShirtSrc;
+            shirtLimit++;
+            myButton.onclick = function() {
+              myButton.remove();
+              shirtLimit--;
+            }
+            //need to create a button that is parent to icon and spans it
+
+          }
+
+        }      
+        function shirtIcon4() {
+          //adding shirt
+          let myButton = document.createElement('Button');
+          let myIcon = document.createElement('img');
+          const shirtWindow = document.querySelector('#icon-holder');
+          const getShirt = document.querySelector('#pic');
+          let getShirtSrc = document.querySelector('#pic').src;
+ 
+          if (shirtLimit < 4) {
+            myButton.style.width = '40%';
+            myButton.style.height = '40%';
+            myButton.style.margin = '10px 4%';
+            //setting background
+            redRegex.test(getShirt.src) ? myButton.style.backgroundColor='red':
+            orangeRegex.test(getShirt.src) ? myButton.style.backgroundColor='#e68000':
+            yellowRegex.test(getShirt.src)  ? myButton.style.backgroundColor='#d9ee00':
+            greenRegex.test(getShirt.src) ? myButton.style.backgroundColor='#1e9707':
+            blueRegex.test(getShirt.src) ? myButton.style.backgroundColor='#0000ff':
+            myButton.style.backgroundColor='#ab00e6';       
+
+            myButton.style.border =0;
+           
+            shirtWindow.appendChild(myButton);
+    
+            myIcon.src='Ouricon_4.png';
+            myIcon.style.width= '100%';
+            myIcon.style.height='100%';
+            myIcon.style.margin = 0;
+            /*document.getElementById('icon1').src='Ouricon_1.png';*/
+            myButton.appendChild(myIcon);
+            getShirt.src=getShirtSrc;
+            shirtLimit++;
+            myButton.onclick = function() {
+              myButton.remove();
+              shirtLimit--;
+            }
+            //need to create a button that is parent to icon and spans it
+
+          }
+
+        }  
+
+        function shirtIcon5() {
+          //adding shirt
+          let myButton = document.createElement('Button');
+          let myIcon = document.createElement('img');
+          const shirtWindow = document.querySelector('#icon-holder');
+          const getShirt = document.querySelector('#pic');
+          let getShirtSrc = document.querySelector('#pic').src;
+ 
+          if (shirtLimit < 4) {
+            myButton.style.width = '40%';
+            myButton.style.height = '40%';
+            myButton.style.margin = '10px 4%';
+            //setting background
+            redRegex.test(getShirt.src) ? myButton.style.backgroundColor='red':
+            orangeRegex.test(getShirt.src) ? myButton.style.backgroundColor='#e68000':
+            yellowRegex.test(getShirt.src)  ? myButton.style.backgroundColor='#d9ee00':
+            greenRegex.test(getShirt.src) ? myButton.style.backgroundColor='#1e9707':
+            blueRegex.test(getShirt.src) ? myButton.style.backgroundColor='#0000ff':
+            myButton.style.backgroundColor='#ab00e6';       
+
+            myButton.style.border =0;
+           
+            shirtWindow.appendChild(myButton);
+    
+            myIcon.src='Ouricon_5.png';
+            myIcon.style.width= '100%';
+            myIcon.style.height='100%';
+            myIcon.style.margin = 0;
+            /*document.getElementById('icon1').src='Ouricon_1.png';*/
+            myButton.appendChild(myIcon);
+            getShirt.src=getShirtSrc;
+            shirtLimit++;
+            myButton.onclick = function() {
+              myButton.remove();
+              shirtLimit--;
+            }
+            //need to create a button that is parent to icon and spans it
+
+          }
+
+        }  
+
+        function shirtIcon6() {
+          //adding shirt
+          let myButton = document.createElement('Button');
+          let myIcon = document.createElement('img');
+          const shirtWindow = document.querySelector('#icon-holder');
+          const getShirt = document.querySelector('#pic');
+          let getShirtSrc = document.querySelector('#pic').src;
+ 
+          if (shirtLimit < 4) {
+            myButton.style.width = '40%';
+            myButton.style.height = '40%';
+            myButton.style.margin = '10px 4%';
+            //setting background
+            redRegex.test(getShirt.src) ? myButton.style.backgroundColor='red':
+            orangeRegex.test(getShirt.src) ? myButton.style.backgroundColor='#e68000':
+            yellowRegex.test(getShirt.src)  ? myButton.style.backgroundColor='#d9ee00':
+            greenRegex.test(getShirt.src) ? myButton.style.backgroundColor='#1e9707':
+            blueRegex.test(getShirt.src) ? myButton.style.backgroundColor='#0000ff':
+            myButton.style.backgroundColor='#ab00e6';       
+            myButton.style.border =0;
+           
+            shirtWindow.appendChild(myButton);
+    
+            myIcon.src='Ouricon_6.png';
+            myIcon.style.width= '100%';
+            myIcon.style.height='100%';
+            myIcon.style.margin = 0;
+            /*document.getElementById('icon1').src='Ouricon_1.png';*/
+            myButton.appendChild(myIcon);
+            getShirt.src=getShirtSrc;
+            shirtLimit++;
+            myButton.onclick = function() {
+              myButton.remove();
+              shirtLimit--;
+            }
+            //need to create a button that is parent to icon and spans it
+
+          }
+
+        }  
+
+
+        /* GONNA MAKE PANTS ICONS */
+        let pantsLimit=0;
+
+        function pantsIcon1() {
+          //adding shirt
+          let myButton = document.createElement('Button');
+          let myIcon = document.createElement('img');
+          const pantWindow = document.querySelector('#icon-holder-pants');
+          const getPants = document.querySelector('#pic_pant');
+          let getPantsSrc = document.querySelector('#pic_pant').src;
+ 
+          if (pantsLimit < 3) {
+            myButton.style.width = '100%';
+            myButton.style.height = '24%';
+            myButton.style.margin = '10px 4%';
+            //setting background
+            redPantRegex.test(getPants.src) ? myButton.style.backgroundColor='#da0000':
+            orangePantRegex.test(getPants.src) ? myButton.style.backgroundColor='#de7100':
+            yellowPantRegex.test(getPants.src)  ? myButton.style.backgroundColor='#f6ee02':
+            greenPantRegex.test(getPants.src) ? myButton.style.backgroundColor='#1dbb00':
+            bluePantRegex.test(getPants.src) ? myButton.style.backgroundColor='#002ee7':
+            myButton.style.backgroundColor='#ab00e6';       
+            myButton.style.border =0;
+           
+            pantWindow.appendChild(myButton);
+    
+            myIcon.src='Ouricon_1.png';
+            myIcon.style.width= '100%';
+            myIcon.style.height='100%';
+            myIcon.style.margin = 0;
+            /*document.getElementById('icon1').src='Ouricon_1.png';*/
+            myButton.appendChild(myIcon);
+            getPants.src=getPantsSrc;
+            pantsLimit++;
+            myButton.onclick = function() {
+              myButton.remove();
+              pantsLimit--;
+            }
+            //need to create a button that is parent to icon and spans it
+
+          }
+
+        }  
+
+        function pantsIcon2() {
+          //adding shirt
+          let myButton = document.createElement('Button');
+          let myIcon = document.createElement('img');
+          const pantWindow = document.querySelector('#icon-holder-pants');
+          const getPants = document.querySelector('#pic_pant');
+          let getPantsSrc = document.querySelector('#pic_pant').src;
+ 
+          if (pantsLimit < 3) {
+            myButton.style.width = '100%';
+            myButton.style.height = '24%';
+            myButton.style.margin = '10px 4%';
+            //setting background
+            redPantRegex.test(getPants.src) ? myButton.style.backgroundColor='#da0000':
+            orangePantRegex.test(getPants.src) ? myButton.style.backgroundColor='#de7100':
+            yellowPantRegex.test(getPants.src)  ? myButton.style.backgroundColor='#f6ee02':
+            greenPantRegex.test(getPants.src) ? myButton.style.backgroundColor='#1dbb00':
+            bluePantRegex.test(getPants.src) ? myButton.style.backgroundColor='#002ee7':
+            myButton.style.backgroundColor='#ab00e6';          
+            myButton.style.border =0;
+           
+            pantWindow.appendChild(myButton);
+    
+            myIcon.src='Ouricon_2.png';
+            myIcon.style.width= '100%';
+            myIcon.style.height='100%';
+            myIcon.style.margin = 0;
+            /*document.getElementById('icon1').src='Ouricon_1.png';*/
+            myButton.appendChild(myIcon);
+            getPants.src=getPantsSrc;
+            pantsLimit++;
+            myButton.onclick = function() {
+              myButton.remove();
+              pantsLimit--;
+            }
+            //need to create a button that is parent to icon and spans it
+
+          }
+
+        }   
+        
+
+        function pantsIcon3() {
+          //adding shirt
+          let myButton = document.createElement('Button');
+          let myIcon = document.createElement('img');
+          const pantWindow = document.querySelector('#icon-holder-pants');
+          const getPants = document.querySelector('#pic_pant');
+          let getPantsSrc = document.querySelector('#pic_pant').src;
+ 
+          if (pantsLimit < 3) {
+            myButton.style.width = '100%';
+            myButton.style.height = '24%';
+            myButton.style.margin = '10px 4%';
+            //setting background
+            redPantRegex.test(getPants.src) ? myButton.style.backgroundColor='#da0000':
+            orangePantRegex.test(getPants.src) ? myButton.style.backgroundColor='#de7100':
+            yellowPantRegex.test(getPants.src)  ? myButton.style.backgroundColor='#f6ee02':
+            greenPantRegex.test(getPants.src) ? myButton.style.backgroundColor='#1dbb00':
+            bluePantRegex.test(getPants.src) ? myButton.style.backgroundColor='#002ee7':
+            myButton.style.backgroundColor='#ab00e6';           
+            myButton.style.border =0;
+           
+            pantWindow.appendChild(myButton);
+    
+            myIcon.src='Ouricon_3.png';
+            myIcon.style.width= '100%';
+            myIcon.style.height='100%';
+            myIcon.style.margin = 0;
+            /*document.getElementById('icon1').src='Ouricon_1.png';*/
+            myButton.appendChild(myIcon);
+            getPants.src=getPantsSrc;
+            pantsLimit++;
+            myButton.onclick = function() {
+              myButton.remove();
+              pantsLimit--;
+            }
+            //need to create a button that is parent to icon and spans it
+
+          }
+
+        }    
+        
+
+        function pantsIcon4() {
+          //adding shirt
+          let myButton = document.createElement('Button');
+          let myIcon = document.createElement('img');
+          const pantWindow = document.querySelector('#icon-holder-pants');
+          const getPants = document.querySelector('#pic_pant');
+          let getPantsSrc = document.querySelector('#pic_pant').src;
+ 
+          if (pantsLimit < 3) {
+            myButton.style.width = '100%';
+            myButton.style.height = '24%';
+            myButton.style.margin = '10px 4%';
+            //setting background
+            redPantRegex.test(getPants.src) ? myButton.style.backgroundColor='#da0000':
+            orangePantRegex.test(getPants.src) ? myButton.style.backgroundColor='#de7100':
+            yellowPantRegex.test(getPants.src)  ? myButton.style.backgroundColor='#f6ee02':
+            greenPantRegex.test(getPants.src) ? myButton.style.backgroundColor='#1dbb00':
+            bluePantRegex.test(getPants.src) ? myButton.style.backgroundColor='#002ee7':
+            myButton.style.backgroundColor='#ab00e6';     
+            myButton.style.border =0;
+           
+            pantWindow.appendChild(myButton);
+    
+            myIcon.src='Ouricon_4.png';
+            myIcon.style.width= '100%';
+            myIcon.style.height='100%';
+            myIcon.style.margin = 0;
+            /*document.getElementById('icon1').src='Ouricon_1.png';*/
+            myButton.appendChild(myIcon);
+            getPants.src=getPantsSrc;
+            pantsLimit++;
+            myButton.onclick = function() {
+              myButton.remove();
+              pantsLimit--;
+            }
+            //need to create a button that is parent to icon and spans it
+
+          }
+
+        }     
+
+        function pantsIcon5() {
+          //adding shirt
+          let myButton = document.createElement('Button');
+          let myIcon = document.createElement('img');
+          const pantWindow = document.querySelector('#icon-holder-pants');
+          const getPants = document.querySelector('#pic_pant');
+          let getPantsSrc = document.querySelector('#pic_pant').src;
+ 
+          if (pantsLimit < 3) {
+            myButton.style.width = '100%';
+            myButton.style.height = '24%';
+            myButton.style.margin = '10px 4%';
+            //setting background
+            redPantRegex.test(getPants.src) ? myButton.style.backgroundColor='#da0000':
+            orangePantRegex.test(getPants.src) ? myButton.style.backgroundColor='#de7100':
+            yellowPantRegex.test(getPants.src)  ? myButton.style.backgroundColor='#f6ee02':
+            greenPantRegex.test(getPants.src) ? myButton.style.backgroundColor='#1dbb00':
+            bluePantRegex.test(getPants.src) ? myButton.style.backgroundColor='#002ee7':
+            myButton.style.backgroundColor='#ab00e6';           
+            myButton.style.border =0;
+           
+            pantWindow.appendChild(myButton);
+    
+            myIcon.src='Ouricon_5.png';
+            myIcon.style.width= '100%';
+            myIcon.style.height='100%';
+            myIcon.style.margin = 0;
+            /*document.getElementById('icon1').src='Ouricon_1.png';*/
+            myButton.appendChild(myIcon);
+            getPants.src=getPantsSrc;
+            pantsLimit++;
+            myButton.onclick = function() {
+              myButton.remove();
+              pantsLimit--;
+            }
+            //need to create a button that is parent to icon and spans it
+
+          }
+
+        }     
+
+        function pantsIcon6() {
+          //adding shirt
+          let myButton = document.createElement('Button');
+          let myIcon = document.createElement('img');
+          const pantWindow = document.querySelector('#icon-holder-pants');
+          const getPants = document.querySelector('#pic_pant');
+          let getPantsSrc = document.querySelector('#pic_pant').src;
+ 
+          if (pantsLimit < 3) {
+            myButton.style.width = '100%';
+            myButton.style.height = '24%';
+            myButton.style.margin = '10px 4%';
+            //setting background
+            redPantRegex.test(getPants.src) ? myButton.style.backgroundColor='#da0000':
+            orangePantRegex.test(getPants.src) ? myButton.style.backgroundColor='#de7100':
+            yellowPantRegex.test(getPants.src)  ? myButton.style.backgroundColor='#f6ee02':
+            greenPantRegex.test(getPants.src) ? myButton.style.backgroundColor='#1dbb00':
+            bluePantRegex.test(getPants.src) ? myButton.style.backgroundColor='#002ee7':
+            myButton.style.backgroundColor='#ab00e6';     
+            myButton.style.border =0;
+           
+            pantWindow.appendChild(myButton);
+    
+            myIcon.src='Ouricon_6.png';
+            myIcon.style.width= '100%';
+            myIcon.style.height='100%';
+            myIcon.style.margin = 0;
+            /*document.getElementById('icon1').src='Ouricon_1.png';*/
+            myButton.appendChild(myIcon);
+            getPants.src=getPantsSrc;
+            pantsLimit++;
+            myButton.onclick = function() {
+              myButton.remove();
+              pantsLimit--;
+            }
+            //need to create a button that is parent to icon and spans it
+
+          }
+
+        }     
+
+        
+        function textChanger() {
+          myVal = document.querySelector('#val-pants').value;
+          myButton = document.querySelector('#customise-2');
+          document.querySelector('#textarea-pants').innerHTML = myVal;
+        }
+        function textChanger2() {
+          myVal = document.querySelector('#val-shirts').value;
+          myButton = document.querySelector('#customise-1');
+          document.querySelector('#textarea-shirts').innerHTML = myVal;
+        }
+
+        function executeReload() {
+          console.log('button works!');
+        }
+
+      </script>
+
+
+
+        
+
+    </body>
+</html>    
+
